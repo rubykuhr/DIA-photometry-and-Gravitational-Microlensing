@@ -11,7 +11,7 @@ Date: 03/03/2026
 ----------------
 
 This code extracts the mean brightness and scatter of each difference image
-from all text files with the name format {vb_name}_0{variable[i]}. A figure
+from all text files with the name format {VARIABLE_TEXT_NAME}_0{VARIABLE[i]}. A figure
 showing how the mean brightness and scatter vary as the parameter varies is
 produced. This figure is displayed to the user and saved to the directory if
 save == True. This figure contains data for 10 test images.
@@ -72,3 +72,4 @@ plt.tight_layout()
 if SAVE is True:
     plt.savefig(f'{VARIABLE_TEXT_NAME}.png')
 plt.show()
+
