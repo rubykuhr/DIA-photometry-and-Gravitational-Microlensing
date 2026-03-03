@@ -47,7 +47,7 @@ scatter = firstfile[:,3]
 
 # Continuing to stack onto the mean and scatter variables
 for i in range(1, NUMBER_VARIATIONS):
-    data = np.genfromtxt(f'{VARIABLE_TEXT_NAME}_0{i}.txt', delimiter = ' ')
+    data = np.genfromtxt(f'{VARIABLE_TEXT_NAME}_0{VARIABLE[i]}.txt', delimiter = ' ')
     mean = np.vstack((mean, data[:,1]))
     scatter = np.vstack((scatter, data[:,3]))
 
@@ -72,4 +72,5 @@ plt.tight_layout()
 if SAVE is True:
     plt.savefig(f'{VARIABLE_TEXT_NAME}.png')
 plt.show()
+
 
